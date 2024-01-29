@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: foundation_trpc2_db
+    image: postgres
+    restart: always
+    ports:
+      - ${PG_PORT}:5432
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - db_data_foundation_trpc2:/var/lib/postgresql/data
+  pgadmin:
+    container_name: foundation_trpc2_pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - ${PGADMIN_PORT}:80
+    depends_on:
+      - db
+volumes:
+  db_data_foundation_trpc2:
