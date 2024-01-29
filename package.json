@@ -17,9 +17,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
     "nx": "17.2.8",
     "prettier": "^3.2.4",
-    "typescript": "^5",
-    "husky": "^8.0.0"
+    "typescript": "^5"
   }
 }
