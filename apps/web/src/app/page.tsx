@@ -1,6 +1,7 @@
-import { trpc } from '@foundation-trpc/trpc-client/src'
+'use client'
+import { trpcClient } from '@foundation-trpc/trpc-client/src/client'
 
-export default async function Home() {
-  const users = await trpc.auth.users.query()
-  return <main>Hello {JSON.stringify(users)}</main>
+export default function Home() {
+  const { data } = trpcClient.auth.users.useQuery()
+  return <main>Hello {JSON.stringify(data)}</main>
 }
