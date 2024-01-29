@@ -10,10 +10,15 @@
   "license": "ISC",
   "dependencies": {
     "@foundation-trpc/db": "workspace:^",
+    "@foundation-trpc/forms": "workspace:^",
     "@trpc/server": "^10.45.0",
-    "jsonwebtoken": "^9.0.2"
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "@types/jsonwebtoken": "^9.0.5"
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/uuid": "^9.0.8"
   }
 }
