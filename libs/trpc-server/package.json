@@ -1,5 +1,5 @@
 {
-  "name": "@foundation-trpc/db",
+  "name": "@foundation-trpc/trpc-server",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -8,10 +8,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "prisma": "^5.8.1"
-  },
   "dependencies": {
-    "@prisma/client": "5.8.1"
+    "@foundation-trpc/db": "workspace:^",
+    "@trpc/server": "^10.45.0"
   }
 }
