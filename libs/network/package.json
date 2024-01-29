@@ -1,0 +1,24 @@
+{
+  "name": "@foundation-trpc/network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "next-auth": "^4.24.5"
+  },
+  "peerDependencies": {
+    "next-auth": "^4.24.5"
+  },
+  "dependencies": {
+    "@foundation-trpc/db": "workspace:^",
+    "@foundation-trpc/trpc-client": "workspace:^",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
