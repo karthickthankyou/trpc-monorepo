@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Provider } from '@foundation-trpc/trpc-client/src/Provider'
-import { SessionProvider } from './components/SessionProvider'
+import { SessionProvider } from '@foundation-trpc/ui/src/components/molecules/SessionProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
