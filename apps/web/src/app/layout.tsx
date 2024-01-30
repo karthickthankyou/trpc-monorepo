@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Provider } from '@foundation-trpc/trpc-client/src/Provider'
 import { SessionProvider } from '@foundation-trpc/ui/src/components/molecules/SessionProvider'
+import { Container } from '@foundation-trpc/ui/src/components/atoms/container'
+import { Navbar } from '@foundation-trpc/ui/src/components/organisms/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <SessionProvider>
-          <Provider>{children}</Provider>
+          <Provider>
+            <Navbar />
+            <Container>{children}</Container>
+          </Provider>
         </SessionProvider>
       </body>
     </html>

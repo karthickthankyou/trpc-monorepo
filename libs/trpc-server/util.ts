@@ -2,26 +2,17 @@ import { prisma } from '@foundation-trpc/db'
 import { Role } from './types'
 import { TRPCError } from '@trpc/server'
 
-export const userHasRequiredRole = async (
-  uid: string,
-  requiredRole: Role,
-): Promise<boolean> => {
-  let userExists
+export const getUserRoles = async (uid: string): Promise<Role[]> => {
+  const [adminExists, managerExists] = await Promise.all([
+    prisma.admin.findUnique({ where: { uid } }),
+    prisma.manager.findUnique({ where: { uid } }),
+  ])
 
-  switch (requiredRole) {
-    case 'admin':
-      userExists = await prisma.admin.findUnique({
-        where: { uid },
-      })
-      break
-    case 'manager':
-      userExists = await prisma.manager.findUnique({
-        where: { uid },
-      })
-      break
-  }
+  const roles: Role[] = []
+  if (adminExists) roles.push('admin')
+  if (managerExists) roles.push('manager')
 
-  return Boolean(userExists)
+  return roles
 }
 
 export const authorizeUser = async (
@@ -32,14 +23,36 @@ export const authorizeUser = async (
     return // No specific roles required, access is granted
   }
 
-  const roleCheckPromises = roles.map((role) => userHasRequiredRole(uid, role))
+  const userRoles = await getUserRoles(uid)
 
-  const roleCheckResults = await Promise.all(roleCheckPromises)
-  if (!roleCheckResults.some(Boolean)) {
+  if (!userRoles.some((role) => roles.includes(role))) {
     throw new TRPCError({
       code: 'FORBIDDEN',
-      message: 'User does not have the required role.',
+      message: 'User does not have the required role(s).',
     })
   }
-  return
+}
+
+export const checkRowLevelPermission = async (
+  uid: string,
+  allowedUids: string | string[],
+  allowedRoles: Role[] = ['admin'],
+) => {
+  const userRoles = await getUserRoles(uid)
+
+  if (userRoles?.some((role) => allowedRoles.includes(role))) {
+    return true
+  }
+
+  const uids =
+    typeof allowedUids === 'string'
+      ? [allowedUids]
+      : allowedUids.filter(Boolean)
+
+  if (!uids.includes(uid)) {
+    throw new TRPCError({
+      code: 'FORBIDDEN',
+      message: 'You are not allowed to do this action.',
+    })
+  }
 }
