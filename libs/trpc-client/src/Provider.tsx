@@ -14,8 +14,11 @@ export const Provider = ({ children }: { children: React.ReactNode }) => {
         httpBatchLink({
           url: 'http://localhost:8080/trpc',
           async headers() {
+            const token = await fetch(
+              process.env.NEXT_PUBLIC_API_URL + '/api/auth/token',
+            ).then((res) => res.json())
             return {
-              authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJrYXJ0aGljayJ9.yq0wcUXHOUXnfVW96Uk-Wo6wAXYDsyj7Omj4IvMLwww`,
+              authorization: `Bearer ${token}`,
             }
           },
         }),
