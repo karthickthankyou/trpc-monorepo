@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --brand-hue: 240;
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -33,9 +35,71 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* Slate */
+    --slate-50: 210 40% 98%;
+    --slate-100: 210 40% 96%;
+    --slate-200: 214 31% 91%;
+    --slate-300: 212 26% 83%;
+    --slate-400: 215 20% 65%;
+    --slate-500: 215 16% 46%;
+    --slate-600: 215 19% 34%;
+    --slate-700: 215 25% 26%;
+    --slate-800: 217 32% 17%;
+    --slate-900: 222 47% 11%;
+    --slate-950: 228 84% 4%;
+
+    /* Yellow */
+    --yellow-50: 52 40% 98%;
+    --yellow-100: 52 40% 96%;
+    --yellow-200: 52 31% 91%;
+    --yellow-300: 52 26% 83%;
+    --yellow-400: 52 20% 65%;
+    --yellow-500: 52 16% 46%;
+    --yellow-600: 52 19% 34%;
+    --yellow-700: 52 25% 26%;
+    --yellow-800: 52 32% 17%;
+    --yellow-900: 52 47% 11%;
+    --yellow-950: 52 84% 4%;
+
+    /* Blue */
+    --blue-50: var(--brand-hue) 100% 97%;
+    --blue-100: var(--brand-hue) 93% 93%;
+    --blue-200: var(--brand-hue) 94% 86%;
+    --blue-300: var(--brand-hue) 95% 73%;
+    --blue-400: var(--brand-hue) 93% 59%;
+    --blue-500: var(--brand-hue) 88% 48%;
+    --blue-600: var(--brand-hue) 98% 39%;
+    --blue-700: var(--brand-hue) 96% 32%;
+    --blue-800: var(--brand-hue) 90% 27%;
+    --blue-900: var(--brand-hue) 80% 23%;
+    --blue-950: var(--brand-hue) 80% 15%;
+
+    /* Red */
+    --red-50: 350 100% 97%;
+    --red-100: 350 93% 93%;
+    --red-200: 350 94% 86%;
+    --red-300: 350 95% 73%;
+    --red-400: 350 93% 59%;
+    --red-500: 350 88% 48%;
+    --red-600: 350 98% 39%;
+    --red-700: 350 96% 32%;
+    --red-800: 350 90% 27%;
+    --red-900: 350 80% 23%;
+    --red-950: 350 80% 15%;
+
+    /* Black */
+    --black: 0 0% 0%;
+    /* White */
+    --white: 0 0% 100%;
+
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
   }
 
   .dark {
+    --brand-hue: 240;
+
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -63,6 +127,63 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    /* Slate */
+    --slate-950: 210 40% 98%;
+    --slate-900: 210 40% 96%;
+    --slate-800: 214 31% 91%;
+    --slate-700: 212 26% 83%;
+    --slate-600: 215 20% 65%;
+    --slate-500: 215 16% 46%;
+    --slate-400: 215 19% 34%;
+    --slate-300: 215 25% 26%;
+    --slate-200: 217 32% 17%;
+    --slate-100: 222 47% 11%;
+    --slate-50: 228 84% 4%;
+
+    /* Yellow */
+    --yellow-950: 52 40% 98%;
+    --yellow-900: 52 40% 96%;
+    --yellow-800: 52 31% 91%;
+    --yellow-700: 52 26% 83%;
+    --yellow-600: 52 20% 65%;
+    --yellow-500: 52 16% 46%;
+    --yellow-400: 52 19% 34%;
+    --yellow-300: 52 25% 26%;
+    --yellow-200: 52 32% 17%;
+    --yellow-100: 52 47% 11%;
+    --yellow-50: 52 84% 4%;
+
+    /* Blue */
+    --blue-950: var(--brand-hue) 100% 97%;
+    --blue-900: var(--brand-hue) 93% 93%;
+    --blue-800: var(--brand-hue) 94% 86%;
+    --blue-700: var(--brand-hue) 95% 73%;
+    --blue-600: var(--brand-hue) 93% 59%;
+    --blue-500: var(--brand-hue) 88% 48%;
+    --blue-400: var(--brand-hue) 98% 39%;
+    --blue-300: var(--brand-hue) 96% 32%;
+    --blue-200: var(--brand-hue) 90% 27%;
+    --blue-100: var(--brand-hue) 80% 23%;
+    --blue-50: var(--brand-hue) 80% 15%;
+
+    /* Red */
+    --red-950: 350 100% 97%;
+    --red-900: 350 93% 93%;
+    --red-800: 350 94% 86%;
+    --red-700: 350 95% 73%;
+    --red-600: 350 93% 59%;
+    --red-500: 350 88% 48%;
+    --red-400: 350 98% 39%;
+    --red-300: 350 96% 32%;
+    --red-200: 350 90% 27%;
+    --red-100: 350 80% 23%;
+    --red-50: 350 80% 15%;
+
+    /* Black */
+    --black: 0 0% 100%;
+    /* White */
+    --white: 0 0% 0%;
   }
 }
 

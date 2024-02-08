@@ -19,6 +19,7 @@ import { useSession } from 'next-auth/react'
 import { useDialogState } from '../../util/hooks'
 import { buttonVariants } from '../../util/variants'
 import { MenuItem } from '../../util/types'
+import React from 'react'
 
 export interface INavSidebarProps {
   menuItems: MenuItem[]

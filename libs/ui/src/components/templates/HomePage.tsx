@@ -5,7 +5,7 @@ import { GitCommit } from 'lucide-react'
 export const HomePage = () => {
   return (
     <div className="max-w-2xl my-8 space-y-8">
-      <h1 className="text-3xl font-bold mb-4">
+      <h1 className="mb-4 text-3xl font-bold">
         Monorepo for Web Application Development
       </h1>
 
@@ -13,16 +13,16 @@ export const HomePage = () => {
         <Link
           href="https://github.com/karthickthankyou/foundation-trpc"
           target="_blank"
-          className="inline-flex gap-2 border px-2 py-1"
+          className="inline-flex gap-2 px-2 py-1 border"
         >
           <GitCommit /> Github <GitCommit />
         </Link>
       </div>
-      <h2 className="text-xl font-semibold mb-2">Structure</h2>
+      <h2 className="mb-2 text-xl font-semibold">Structure</h2>
 
       <div>
-        <h3 className="text-lg font-semibold mb-2">Apps</h3>
-        <ul className="list-disc ml-6 space-y-2">
+        <h3 className="mb-2 text-lg font-semibold">Apps</h3>
+        <ul className="ml-6 space-y-2 list-disc">
           <li>web: Next.js application for the frontend user interface.</li>
           <li>
             api: Express backend API powered by TRPC for efficient remote
@@ -31,9 +31,9 @@ export const HomePage = () => {
         </ul>
       </div>
 
-      <div className=" mt-4">
-        <h3 className="text-lg font-semibold mb-2">Libs</h3>
-        <ul className="list-disc ml-6 space-y-2">
+      <div className="mt-4 ">
+        <h3 className="mb-2 text-lg font-semibold">Libs</h3>
+        <ul className="ml-6 space-y-2 list-disc">
           <li>
             db: Database interactions handled by Prisma, ensuring data
             consistency and efficiency.
@@ -59,8 +59,8 @@ export const HomePage = () => {
         </ul>
       </div>
 
-      <h2 className="text-xl font-semibold my-4">Key Features</h2>
-      <ul className="list-disc ml-6 space-y-2">
+      <h2 className="my-4 text-xl font-semibold">Key Features</h2>
+      <ul className="ml-6 space-y-2 list-disc">
         <li>
           TypeScript: Enforces strong typing for a clean, maintainable, and
           error-free codebase.

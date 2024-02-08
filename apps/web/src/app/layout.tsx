@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import '@foundation-trpc/ui/src/index.css'
 import { Provider } from '@foundation-trpc/trpc-client/src/Provider'
 import { SessionProvider } from '@foundation-trpc/ui/src/components/molecules/SessionProvider'
 import { Container } from '@foundation-trpc/ui/src/components/atoms/container'
