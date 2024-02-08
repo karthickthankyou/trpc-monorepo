@@ -7,7 +7,7 @@ export const trpc = createTRPCProxyClient<AppRouter>({
       url: process.env.NEXT_PUBLIC_API_URL + '/trpc',
       async headers() {
         const token = await fetch(
-          process.env.NEXT_PUBLIC_API_URL + '/api/auth/token',
+          process.env.NEXT_PUBLIC_APP_URL + '/api/auth/token',
         ).then((res) => res.json())
         return {
           authorization: `Bearer ${token}`,

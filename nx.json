@@ -1,17 +1,11 @@
 {
   "targetDefaults": {
     "dev": {
-      "dependsOn": [
-        "^dev"
-      ]
+      "dependsOn": ["^dev"]
     },
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "{projectRoot}/.next, dist, build"
-      ],
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/.next, dist, build"],
       "cache": true
     },
     "tsc": {
@@ -23,6 +17,5 @@
   },
   "affected": {
     "defaultBase": "master"
-  },
-  "nxCloudAccessToken": "Zjc0NGJhODktZGMzZS00ZTI3LThiMjMtYzQyZjU2YTE1NjNmfHJlYWQtd3JpdGU="
+  }
 }
