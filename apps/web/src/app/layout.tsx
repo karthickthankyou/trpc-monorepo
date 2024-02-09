@@ -5,6 +5,11 @@ import { Provider } from '@foundation-trpc/trpc-client/src/Provider'
 import { SessionProvider } from '@foundation-trpc/ui/src/components/molecules/SessionProvider'
 import { Container } from '@foundation-trpc/ui/src/components/atoms/container'
 import { Navbar } from '@foundation-trpc/ui/src/components/organisms/Navbar'
+import { Toaster } from '@foundation-trpc/ui/src/components/molecules/Toaster/Toaster'
+
+export const dynamic = !(process.env.NODE_ENV === 'production')
+  ? 'force-dynamic'
+  : 'auto'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +28,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <SessionProvider>
           <Provider>
+            <Toaster />
             <Navbar />
             <Container>{children}</Container>
           </Provider>

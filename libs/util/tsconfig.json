@@ -3,8 +3,6 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": ".",
-    "esModuleInterop": true,
     "jsx": "react-jsx",
-    "skipLibCheck": true,
   },
 }

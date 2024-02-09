@@ -11,14 +11,18 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.5",
+    "next": "14.1.0",
     "next-auth": "^4.24.5"
   },
   "peerDependencies": {
+    "next": "14.1.0",
     "next-auth": "^4.24.5"
   },
   "dependencies": {
     "@foundation-trpc/db": "workspace:^",
+    "@foundation-trpc/forms": "workspace:^",
     "@foundation-trpc/trpc-client": "workspace:^",
+    "@foundation-trpc/util": "workspace:^",
     "jsonwebtoken": "^9.0.2"
   }
 }

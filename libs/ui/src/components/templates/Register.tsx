@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { Label } from '../atoms/label'
 import { Input } from '../atoms/input'
 import { Button } from '../atoms/button'
-import React from 'react'
+
 export function Register() {
   const {
     register,

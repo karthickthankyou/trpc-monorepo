@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+
 import { GitCommit } from 'lucide-react'
 
 export const HomePage = () => {

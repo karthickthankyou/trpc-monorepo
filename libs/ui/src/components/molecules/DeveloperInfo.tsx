@@ -1,7 +1,6 @@
 import { Heart } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '../../util'
-import React from 'react'
 
 export interface IDeveloperInfoProps {
   className?: string
