@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { ZodIssue } from '@foundation-trpc/forms/src'
 
-export type Role = 'admin' | 'teacher' | 'student'
+export type Role = 'admin' | 'manager'
 export type MenuItem = { label: string; href: string; loggedIn: boolean }
 
 export type BaseComponent = {

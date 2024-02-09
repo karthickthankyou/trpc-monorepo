@@ -15,7 +15,7 @@ import { AuthProviderType } from '@foundation-trpc/db/types'
 import { sign } from 'jsonwebtoken'
 
 export const authRoutes = router({
-  users: t.procedure.use(isAuthed('manager')).query(() => {
+  users: t.procedure.use(isAuthed('admin')).query(() => {
     return prisma.user.findMany()
   }),
   user: publicProcedure.input(formSchemaUser).query(({ input: { uid } }) => {
