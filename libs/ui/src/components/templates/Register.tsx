@@ -14,7 +14,7 @@ export function Register() {
     handleSubmit,
     formState: { errors },
   } = userFormRegister()
-  console.log('errors', errors)
+
   const { mutateAsync } = trpcClient.auth.registerWithCredentials.useMutation()
   return (
     <AuthLayout title={'Register'}>
@@ -28,7 +28,6 @@ export function Register() {
               callbackUrl: '/',
             })
           }
-          console.log('user', user)
         })}
       >
         <Label title="Email" error={errors.email?.message}>

@@ -13,13 +13,12 @@ export const isAuthed = (...roles: Role[]) =>
         message: 'Token not found.',
       })
     }
-    console.log('token', token)
+
     let uid
 
     try {
       const user = await verify(token, process.env.NEXTAUTH_SECRET || '')
       uid = (user as JwtPayload).uid
-      console.log('uid', uid)
     } catch (error) {
       throw new TRPCError({
         code: 'FORBIDDEN',

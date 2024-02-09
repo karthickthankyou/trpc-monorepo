@@ -13,7 +13,7 @@ export function SignIn() {
     handleSubmit,
     formState: { errors },
   } = userFormSignIn()
-  console.log('errors', errors)
+
   return (
     <AuthLayout title="Sign In">
       <form

@@ -2,11 +2,11 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
-import { formSchemaRegister } from './schemas'
+import { schemaRegister } from './schemas'
 
-export type FormTypeRegister = z.infer<typeof formSchemaRegister>
+export type FormTypeRegister = z.infer<typeof schemaRegister>
 
 export const userFormRegister = () =>
   useForm<FormTypeRegister>({
-    resolver: zodResolver(formSchemaRegister),
+    resolver: zodResolver(schemaRegister),
   })
